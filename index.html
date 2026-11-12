@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMBA Seguros | Seguros de auto, moto, hogar, vida y viajes</title>
+<meta name="description" content="Cotizá tu seguro de auto, moto, hogar, vida, viajes o bicicleta con AMBA Seguros. Asesoramiento personalizado por WhatsApp o mail.">
+<meta name="theme-color" content="#2a0f33">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Íconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-car" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 28l3.2-9.6A3 3 0 0 1 14 16h20a3 3 0 0 1 2.8 2.4L40 28M6 28h36v8a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-2H13v2a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8z"/><circle cx="14" cy="30" r="1.5"/><circle cx="34" cy="30" r="1.5"/></symbol>
+    <symbol id="i-moto" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="33" r="5.500"/><circle cx="38" cy="33" r="5.500"/><path d="M10 33h8l4-8h8l4 8M16 24h9M22 25l3 8h5M32 16h6l-2 17M30 25l2-9"/><rect x="18" y="27" width="9" height="6" rx="1.500"/></symbol>
+    <symbol id="i-bici" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="31" r="7"/><circle cx="37" cy="31" r="7"/><path d="M11 31l7-13h12l7 13M18 18l7 13M16 14h5M30 18l-2-5h4"/></symbol>
+    <symbol id="i-hogar" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22L24 7l18 15M10 19v21h28V19"/><path d="M20 40V28h8v12"/></symbol>
+    <symbol id="i-vida" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l15 5v11c0 9.5-6.2 16.5-15 20-8.8-3.5-15-10.5-15-20V11z"/><path d="M24 31s-7-4.4-7-9.2a4 4 0 0 1 7-2.6 4 4 0 0 1 7 2.6C31 26.600 24 31 24 31z"/></symbol>
+    <symbol id="i-viajes" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M42 8L6 22l12 5 5 12z"/><path d="M18 27L42 8"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 32 32" fill="currentColor"><path d="M16.003 3C8.83 3 3 8.83 3 16.003c0 2.29.6 4.52 1.74 6.49L3 29l6.68-1.72a13 13 0 0 0 6.32 1.62h.005C23.17 28.9 29 23.07 29 15.9 29 8.83 23.17 3 16.003 3zm0 23.7a10.7 10.7 0 0 1-5.46-1.5l-.39-.23-3.96 1.02 1.06-3.86-.25-.4a10.7 10.7 0 1 1 8.99 4.97zm5.87-8c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.5-.16-.72.16-.21.32-.83 1.04-1.02 1.26-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.57-.08-.16-.72-1.74-.99-2.38-.26-.62-.52-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.1 1.31 3.32c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.68.77.24 1.46.21 2.01.13.61-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.500l4.500 4.500L19 7.500"/></symbol>
+  </defs>
+</svg>
+
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#inicio" aria-label="AMBA Seguros - inicio"><img src="img/logo.png" alt="AMBA Seguros" width="170" height="41"></a>
+  <nav class="nav__links" id="navLinks" aria-label="Principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#coberturas">Coberturas</a>
+    <a href="#como-funciona">Cómo funciona</a>
+    <a href="#siniestro">Siniestros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a class="btn btn--primary nav__cta" href="https://api.whatsapp.com/send/?phone=5491133971956&text=Hola%2C%20quiero%20cotizar%20un%20seguro%20%7C%20desde%20Web%20%7C" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Cotizar</a>
+  <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="blob blob--1"></span><span class="blob blob--2"></span>
+    <span class="grid"></span>
+  </div>
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="dot"></span>Asesores de seguros</p>
+      <h1 class="split">Protegé lo que <em>más te importa</em>, sin vueltas.</h1>
+      <p class="lead">Auto, moto, hogar, vida, viajes y más. Comparamos coberturas de las mejores aseguradoras y te asesoramos de forma personal, por WhatsApp o mail.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg magnetic" href="#cotizar">Cotizar ahora <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost btn--lg" href="https://api.whatsapp.com/send/?phone=5491133971956&text=%7C+desde+Web+%7C" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+      </div>
+      <ul class="hero__trust">
+        <li><svg><use href="#i-check"/></svg>Sin compromiso</li>
+        <li><svg><use href="#i-check"/></svg>Atención personalizada</li>
+        <li><svg><use href="#i-check"/></svg>Varias compañías</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual">
+      <div class="photo" data-parallax="-40">
+        <img src="img/hero-familia.jpg" alt="Familia feliz asegurada en AMBA Seguros" width="1920" height="768">
+      </div>
+      <div class="float float--a" data-parallax="-90"><svg><use href="#i-car"/></svg><div><b>Automotor</b><small>Desde modelos 1943</small></div></div>
+      <div class="float float--b" data-parallax="60"><svg><use href="#i-hogar"/></svg><div><b>Hogar</b><small>Propietarios e inquilinos</small></div></div>
+      <div class="float float--c" data-parallax="-30"><span class="pulse"></span><div><b>Respondemos por WhatsApp</b><small>Pedí tu cotización hoy</small></div></div>
+    </div>
+  </div>
+  <a href="#coberturas" class="scrollhint" aria-label="Ir a coberturas"><span></span></a>
+</section>
+
+<!-- MARQUEE -->
+<section class="logos" aria-label="Compañías con las que trabajamos">
+  <p class="logos__title">Trabajamos con las compañías más sólidas</p>
+  <div class="marquee">
+    <div class="marquee__track">
+      <img src="img/l-sancristobal.png" alt="San Cristóbal Seguros" loading="lazy"><img src="img/l-mercantil.png" alt="Mercantil Andina" loading="lazy"><img src="img/l-rivadavia.png" alt="Rivadavia Seguros" loading="lazy"><img src="img/l-atm.png" alt="ATM" loading="lazy"><img src="img/l-allianz.png" alt="Allianz" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURAS -->
+<section class="section" id="coberturas">
+  <div class="wrap">
+    <header class="section__head">
+      <p class="eyebrow"><span class="dot"></span>Coberturas</p>
+      <h2 class="split">Un seguro para cada parte de tu vida</h2>
+      <p class="lead">Elegí qué querés proteger y te armamos opciones a medida.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card tilt">
+        <div class="card__icon"><svg><use href="#i-car"/></svg></div>
+        <h3>Seguro Automotor</h3>
+        <p>Todo tipo de vehículos desde el año de fabricación 1943 en adelante.</p>
+        <a class="card__link" href="https://api.whatsapp.com/send/?phone=5491133971956&text=Quiero%20cotizar%20seguro%20automotor%20%7C%20desde%20Web%20%7C" target="_blank" rel="noopener">Cotizar <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card tilt">
+        <div class="card__icon"><svg><use href="#i-moto"/></svg></div>
+        <h3>Seguro de Motos</h3>
+        <p>Asegurá tu moto desde el año 1943, de uso comercial o particular.</p>
+        <a class="card__link" href="https://api.whatsapp.com/send/?phone=5491133971956&text=Quiero%20cotizar%20seguro%20de%20moto%20%7C%20desde%20Web%20%7C" target="_blank" rel="noopener">Cotizar <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card tilt">
+        <div class="card__icon"><svg><use href="#i-bici"/></svg></div>
+        <h3>Bicicleta y Monopatín</h3>
+        <p>Circulá cubierto ante robos, con responsabilidad civil y asistencia.</p>
+        <a class="card__link" href="https://api.whatsapp.com/send/?phone=5491133971956&text=Quiero%20cotizar%20seguro%20de%20bicicleta%20o%20monopat%C3%ADn%20%7C%20desde%20Web%20%7C" target="_blank" rel="noopener">Cotizar <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card tilt">
+        <div class="card__icon"><svg><use href="#i-hogar"/></svg></div>
+        <h3>Seguros del Hogar</h3>
+        <p>Aseguramos todos los bienes de tu hogar, seas propietario o inquilino.</p>
+        <a class="card__link" href="https://api.whatsapp.com/send/?phone=5491133971956&text=Quiero%20cotizar%20seguro%20del%20hogar%20%7C%20desde%20Web%20%7C" target="_blank" rel="noopener">Cotizar <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card tilt">
+        <div class="card__icon"><svg><use href="#i-vida"/></svg></div>
+        <h3>Vida y Retiro</h3>
+        <p>Protegemos lo que más te importa con amplios beneficios y planes a tu medida.</p>
+        <a class="card__link" href="https://api.whatsapp.com/send/?phone=5491133971956&text=Quiero%20cotizar%20seguro%20de%20vida%20o%20retiro%20%7C%20desde%20Web%20%7C" target="_blank" rel="noopener">Cotizar <svg><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card tilt">
+        <div class="card__icon"><svg><use href="#i-viajes"/></svg></div>
+        <h3>Seguros de Viajes</h3>
+        <p>Viajá con la tranquilidad de estar cubierto ante cualquier eventualidad.</p>
+        <a class="card__link" href="https://api.whatsapp.com/send/?phone=5491133971956&text=Quiero%20cotizar%20seguro%20de%20viajes%20%7C%20desde%20Web%20%7C" target="_blank" rel="noopener">Cotizar <svg><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap stats__grid">
+    <div><strong data-count="6">6</strong><span>Tipos de cobertura</span></div>
+    <div><strong data-count="5" data-suffix="+">5</strong><span>Compañías aliadas</span></div>
+    <div><strong data-count="1943" data-plain="1">1943</strong><span>Vehículos asegurables desde</span></div>
+    <div><strong data-count="24" data-suffix="/7">24</strong><span>Consultas por WhatsApp</span></div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="section steps" id="como-funciona">
+  <div class="wrap steps__layout">
+    <header class="steps__head">
+      <p class="eyebrow"><span class="dot"></span>Cómo funciona</p>
+      <h2 class="split">Asegurarte es más simple de lo que pensás</h2>
+      <p class="lead">Tres pasos y listo. Nosotros nos encargamos de la parte difícil.</p>
+      <a class="btn btn--primary" href="#cotizar">Empezar <svg><use href="#i-arrow"/></svg></a>
+    </header>
+    <ol class="steps__list">
+      <span class="steps__line"><i></i></span>
+      <li class="step"><span class="step__n">1</span><div><h3>Contanos qué necesitás</h3><p>Completá el formulario o escribinos por WhatsApp con los datos de lo que querés asegurar.</p></div></li>
+      <li class="step"><span class="step__n">2</span><div><h3>Comparamos por vos</h3><p>Buscamos entre las compañías con las que trabajamos y te presentamos las mejores opciones.</p></div></li>
+      <li class="step"><span class="step__n">3</span><div><h3>Elegís y quedás cubierto</h3><p>Te acompañamos con la contratación y con cualquier consulta durante la vigencia de tu póliza.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FORMULARIO -->
+<section class="section quote" id="cotizar">
+  <div class="wrap quote__box">
+    <div class="quote__copy">
+      <p class="eyebrow eyebrow--light"><span class="dot"></span>Cotización de vehículos</p>
+      <h2 class="split">Pedí tu póliza para auto o moto</h2>
+      <p class="lead">Completá los datos y te respondemos por WhatsApp con las mejores opciones. También podés enviarnos directamente marca, modelo, año y código postal.</p>
+      <ul class="quote__list">
+        <li><svg><use href="#i-check"/></svg>Respuesta personalizada</li>
+        <li><svg><use href="#i-check"/></svg>Sin costo ni compromiso</li>
+        <li><svg><use href="#i-check"/></svg>Varias aseguradoras a la vez</li>
+      </ul>
+    </div>
+    <form class="form" id="quoteForm" novalidate>
+      <div class="field"><input id="f-nombre" name="nombre" required placeholder=" " autocomplete="name"><label for="f-nombre">Nombre</label></div>
+      <div class="field"><input id="f-tel" name="tel" required placeholder=" " inputmode="tel" autocomplete="tel"><label for="f-tel">Celular / WhatsApp</label></div>
+      <div class="field"><input id="f-marca" name="marca" required placeholder=" "><label for="f-marca">Marca del vehículo</label></div>
+      <div class="field"><input id="f-modelo" name="modelo" required placeholder=" "><label for="f-modelo">Modelo</label></div>
+      <div class="field"><input id="f-anio" name="anio" required placeholder=" " inputmode="numeric" maxlength="4"><label for="f-anio">Año</label></div>
+      <div class="field"><input id="f-cp" name="cp" required placeholder=" " inputmode="numeric" autocomplete="postal-code"><label for="f-cp">Código postal</label></div>
+      <div class="field field--full"><input id="f-mail" name="mail" type="email" placeholder=" " autocomplete="email"><label for="f-mail">Correo electrónico (opcional)</label></div>
+      <button class="btn btn--primary btn--lg field--full" type="submit"><svg><use href="#i-wa"/></svg>Consultar por WhatsApp</button>
+      <p class="form__msg" id="formMsg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- SINIESTRO + CONTACTO -->
+<section class="section" id="siniestro">
+  <div class="wrap duo">
+    <article class="panel panel--siniestro">
+      <h3>¿Qué hago en caso de siniestro?</h3>
+      <p>Revisá en la documentación de tu póliza qué datos debés solicitar a los demás involucrados. Ante cualquier duda, escribinos y te guiamos paso a paso.</p>
+      <a class="btn btn--ghost-dark" href="https://api.whatsapp.com/send/?phone=5491133971956&text=Tuve%20un%20siniestro%20%7C%20desde%20Web%20%7C" target="_blank" rel="noopener">Consultar por un siniestro <svg><use href="#i-arrow"/></svg></a>
+    </article>
+    <article class="panel panel--contacto" id="contacto">
+      <h3>Hablá con nosotros</h3>
+      <p>Enviános un correo con tus consultas, usá el formulario de cotización o comunicate por WhatsApp.</p>
+      <a class="contact" href="tel:+5491133971956"><svg><use href="#i-wa"/></svg>+54 911 3397-1956</a>
+      <a class="contact" href="mailto:info@ambaseguros.com"><svg><use href="#i-mail"/></svg>info@ambaseguros.com</a>
+    </article>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <img src="img/logo.png" alt="AMBA Seguros" width="150" height="36">
+    <p>© <span id="year"></span> AMBA Seguros. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://api.whatsapp.com/send/?phone=5491133971956&text=%7C+desde+Web+%7C" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
